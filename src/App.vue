@@ -6,7 +6,7 @@ import Home from './components/Home.vue';
 
 <template>
 
-<Home> sTitulo="ahora le estoy cambiando el titulo"</Home>
+<Home sTitulo="TITULO DESDE APP CAMBIADO "></Home>
 
 
 
