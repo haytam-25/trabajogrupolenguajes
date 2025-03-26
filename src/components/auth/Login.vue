@@ -8,12 +8,17 @@
     const sPasswordre=ref('');
     const sRepetirPassword=ref('');
 
+    const blLoginVisible=ref(true);
+    const blRegisterVisible=ref(false);
+
     function loginPresionado(){
         alert("El usuario escrito es "+sEmail.value+" y la contra escrita es  "+sPassword.value);
 
     }
 
     function registroPresionado(){
+        blLoginVisible.value=false;
+        blRegisterVisible.value=true;
 
     }
 
@@ -24,6 +29,8 @@
     }
 
     function cancelarPresionado(){
+        blLoginVisible.value=true;
+        blRegisterVisible.value=false;
 
     }
 
@@ -31,7 +38,7 @@
 
 <template>
     <div class="contenedor">
-        <div id="login">
+        <div id="login"  v-if="blLoginVisible">
 
             <h2>LOGIN</h2>
 
@@ -45,8 +52,8 @@
 
         </div>
         
-        <div id="register">
-            <h2>Register</h2>
+        <div id="register" v-if="blRegisterVisible">
+            <h2>Registro</h2>
 
             
             <input  type="text" placeholder="Email o usuario" v-model="sEmailre"/>
