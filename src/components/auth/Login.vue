@@ -4,9 +4,7 @@
     const sEmail=ref('');
     const sPassword=ref('');
 
-    const sEmailre=ref('');
-    const sPasswordre=ref('');
-    const sRepetirPassword=ref('');
+  
 
     const blLoginVisible=ref(true);
     const blRegisterVisible=ref(false);
@@ -22,23 +20,12 @@
 
     }
 
-    
-    function registrarPresionado(){
-        alert("El usuario escrito es "+sEmailre.value+" y la contra escrita es  "+sPasswordre.value);
-
-    }
-
-    function cancelarPresionado(){
-        blLoginVisible.value=true;
-        blRegisterVisible.value=false;
-
-    }
 
 </script>
 
 <template>
     <div class="contenedor">
-        <div id="login"  v-if="blLoginVisible">
+        <div id="login">
 
             <h2>LOGIN</h2>
 
@@ -52,21 +39,7 @@
 
         </div>
         
-        <div id="register" v-if="blRegisterVisible">
-            <h2>Registro</h2>
-
-            
-            <input  type="text" placeholder="Email o usuario" v-model="sEmailre"/>
-            <input  type="password" placeholder="Contraseña"v-model="sPasswordre"/>
-            <input  type="password" placeholder="Repetir Contraseña"v-model="sRepetirPassword"/>
-
-
-            <button @click="registrarPresionado">REGISTRAR</button>
-
-            <button @click="cancelarPresionado">CANCELAR</button>
-
-            
-        </div>
+        
 
     </div>
 

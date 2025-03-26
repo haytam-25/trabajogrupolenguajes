@@ -18,10 +18,11 @@ const props = defineProps({
             
             <h1> {{sTitulo}} </h1>
             <img src="../assets/descarga.jpg" alt="raphi" class="LOGO"/>
+        
         <div class="loginregister">
             
-            <Login></Login>
-            
+            <Login v-if="true"></Login>
+            <Register v-if="false"></Register>
         
         </div>
     </div>
