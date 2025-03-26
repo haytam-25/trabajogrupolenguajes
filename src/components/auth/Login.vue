@@ -1,10 +1,11 @@
 <script setup>
     import {ref} from 'vue';
+    import {defineEmits} from 'vue';
     
     const sEmail=ref('');
     const sPassword=ref('');
 
-  
+    const emit = defineEmits(['cambioARegistro']);
 
     const blLoginVisible=ref(true);
     const blRegisterVisible=ref(false);
@@ -15,8 +16,7 @@
     }
 
     function registroPresionado(){
-        blLoginVisible.value=false;
-        blRegisterVisible.value=true;
+        emit('cambioARegistro');
 
     }
 

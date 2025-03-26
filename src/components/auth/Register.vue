@@ -15,8 +15,7 @@
     }
 
     function cancelarPresionado(){
-        blLoginVisible.value=true;
-        blRegisterVisible.value=false;
+       
 
     }
 

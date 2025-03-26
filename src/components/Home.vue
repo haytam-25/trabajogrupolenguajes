@@ -1,15 +1,20 @@
 <script setup>
-import {defineProps} from 'vue';
-import Login from './auth/Login.vue';
-import Register from './auth/Register.vue';
+    import {defineProps} from 'vue';
+    import Login from './auth/Login.vue';
+    import Register from './auth/Register.vue';
 
 
-const props = defineProps({
-    sTitulo:{
-        type: String,
-        default: 'TITULO APP'
+    const props = defineProps({
+        sTitulo:{
+            type: String,
+            default: 'TITULO APP'
+        }
+    });
+
+    function MostrarRegistro(){
+        alert("HEMOS LLEGADO A MOSTRAR REGISTRO LOCO");
     }
-});
+
 
 </script>
 
@@ -21,7 +26,7 @@ const props = defineProps({
         
         <div class="loginregister">
             
-            <Login v-if="true"></Login>
+            <Login v-if="true" @cambioARegistro="MostrarRegistro"></Login>
             <Register v-if="false"></Register>
         
         </div>
